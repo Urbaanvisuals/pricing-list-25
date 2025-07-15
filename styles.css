@@ -2363,3 +2363,198 @@ textarea:focus {
 .form-group textarea:focus:valid {
     box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.1);
 } 
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+    .nav {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: #fff;
+        padding: 1rem;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        display: none;
+    }
+
+    .nav.nav-open {
+        display: flex;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+        padding: 0 1rem;
+    }
+
+    .section-subtitle {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+
+    .featured-services {
+        grid-template-columns: 1fr;
+        padding: 0 1rem;
+    }
+
+    .service-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .service-info h3 {
+        font-size: 1.5rem;
+    }
+
+    .cta-options {
+        grid-template-columns: 1fr;
+        padding: 0 1rem;
+    }
+
+    .custom-cta {
+        padding: 2rem 1rem;
+    }
+
+    .cta-content h3 {
+        font-size: 1.5rem;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+        padding: 0 1rem;
+    }
+
+    .contact-form {
+        padding: 1.5rem;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0 1rem;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .footer-section {
+        text-align: center;
+    }
+
+    .footer-info {
+        align-items: center;
+    }
+
+    .package-card {
+        margin: 0 1rem;
+    }
+
+    .pricing-toggle-section {
+        padding: 2rem 1rem;
+    }
+
+    .toggle-switch {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .toggle-option {
+        width: 100%;
+    }
+
+    .licensing-toggle {
+        margin: 0 1rem;
+    }
+
+    .licensing-content {
+        margin: 1rem;
+    }
+
+    .quick-calculator {
+        margin: 0 1rem;
+    }
+}
+
+/* Tablet Adjustments */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .packages-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        padding: 0 1rem;
+    }
+
+    .featured-services {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0 1rem;
+    }
+
+    .cta-options {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0 1rem;
+    }
+}
+
+/* Small Screen Adjustments */
+@media (max-width: 360px) {
+    .hero-title {
+        font-size: 1.8rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    .package-card {
+        padding: 1rem;
+    }
+
+    .price {
+        font-size: 1.8rem;
+    }
+} 
+
+.mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #333;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .mobile-menu-toggle {
+        display: block;
+    }
+
+    .mobile-menu-toggle:hover {
+        color: #e6bc44;
+    }
+} 
