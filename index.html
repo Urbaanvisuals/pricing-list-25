@@ -7,6 +7,7 @@
     <meta name="description" content="Professional real estate photography, virtual tours, and marketing services in Phuket. High-quality property photography packages starting from ฿6,000.">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
     <!-- Header -->
@@ -25,6 +26,7 @@
 
     <!-- Hero Section -->
     <section class="hero">
+        <div class="hero-background"></div>
         <div class="container">
             <div class="hero-content">
                 <h1 class="hero-title">Professional Real Estate Photography</h1>
@@ -34,9 +36,6 @@
                     <a href="#packages" class="btn btn-primary">View Packages</a>
                     <a href="#contact" class="btn btn-secondary">Get Quote</a>
                 </div>
-            </div>
-            <div class="hero-image">
-                <img src="Urbaan Visuals - Pro Retouch - After.jpg" alt="Modern property exterior - Urbaan Visuals portfolio" style="width:100%;max-width:400px;border-radius:12px;box-shadow:0 4px 24px rgba(0,0,0,0.10);object-fit:cover;" />
             </div>
         </div>
     </section>
@@ -48,36 +47,21 @@
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <svg width="60" height="60" viewBox="0 0 60 60">
-                            <circle cx="30" cy="30" r="25" fill="#e6bc44" opacity="0.1"/>
-                            <path d="M20 20 L40 20 L40 40 L20 40 Z" fill="none" stroke="#e6bc44" stroke-width="2"/>
-                            <path d="M25 25 L35 25 M25 30 L35 30 M25 35 L35 35" stroke="#e6bc44" stroke-width="2"/>
-                            <circle cx="30" cy="30" r="3" fill="#e6bc44"/>
-                        </svg>
+                        <i class="fa-solid fa-camera-retro fa-2xl" style="color: #e6bc44;"></i>
                     </div>
                     <h3>One-Stop Agency</h3>
                     <p>From photography to virtual tours or team consulting & training. We handle everything you need for your property marketing.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <svg width="60" height="60" viewBox="0 0 60 60">
-                            <circle cx="30" cy="30" r="25" fill="#e6bc44" opacity="0.1"/>
-                            <path d="M20 25 L30 35 L40 25" stroke="#e6bc44" stroke-width="3" fill="none"/>
-                            <circle cx="30" cy="30" r="8" fill="none" stroke="#e6bc44" stroke-width="2"/>
-                            <path d="M25 25 L35 35 M35 25 L25 35" stroke="#e6bc44" stroke-width="1" opacity="0.5"/>
-                        </svg>
+                        <i class="fa-solid fa-award fa-2xl" style="color: #e6bc44;"></i>
                     </div>
                     <h3>Professional Quality</h3>
                     <p>High-resolution images with expert editing and HDR processing for stunning results that showcase your property's best features.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <svg width="60" height="60" viewBox="0 0 60 60">
-                            <circle cx="30" cy="30" r="25" fill="#e6bc44" opacity="0.1"/>
-                            <path d="M20 30 L30 20 L40 30" stroke="#e6bc44" stroke-width="3" fill="none"/>
-                            <path d="M25 35 L35 35" stroke="#e6bc44" stroke-width="2"/>
-                            <circle cx="30" cy="30" r="2" fill="#e6bc44"/>
-                        </svg>
+                        <i class="fa-solid fa-bolt-lightning fa-2xl" style="color: #e6bc44;"></i>
                     </div>
                     <h3>Fast Delivery</h3>
                     <p>Quick turnaround times of up to 3 business days for most of our services, so you can get your listings online faster and start generating interest.</p>
@@ -281,134 +265,65 @@
             <div class="service-intro">
                 <h2 class="section-title">Pay Per Image Service</h2>
                 <p class="section-subtitle">A flexible approach for clients who want to select their final images after the shoot</p>
-                
-                <div class="workflow-steps">
-                    <div class="step">
-                        <div class="step-number">1</div>
-                        <h4>Book Your Shoot</h4>
-                        <p>Pay only the base fee to secure your photography session</p>
-                    </div>
-                    <div class="step">
-                        <div class="step-number">2</div>
-                        <h4>Review Preview Gallery</h4>
-                        <p>Get access to a private gallery of lightly edited preview images</p>
-                    </div>
-                    <div class="step">
-                        <div class="step-number">3</div>
-                        <h4>Select & Pay</h4>
-                        <p>Choose your preferred images and only pay for what you need</p>
-                    </div>
-                </div>
             </div>
             
-            <div class="pricing-overview">
-                <div class="base-fee-card">
-                    <div class="fee-header">
+            <div class="pricing-overview-compact">
+                <div class="pricing-card base-fee">
+                    <div class="card-header">
                         <h3>Base Shoot Fee</h3>
-                        <div class="fee-price">฿6,000</div>
+                        <div class="price">฿6,000</div>
                     </div>
-                    <p class="fee-description">Professional photography session with preview gallery access</p>
-                    <ul class="fee-includes">
-                        <li>2-hour on-site photography session</li>
-                        <li>Professional equipment setup</li>
-                        <li>Travel within Phuket</li>
-                        <li>Light editing for preview gallery</li>
-                        <li>Private selection platform</li>
-                        <li>No minimum image purchase required</li>
+                    <ul class="feature-list">
+                        <li><i class="fa-solid fa-check"></i> 2-hour photography session</li>
+                        <li><i class="fa-solid fa-check"></i> Professional equipment setup</li>
+                        <li><i class="fa-solid fa-check"></i> Travel within Phuket</li>
+                        <li><i class="fa-solid fa-check"></i> Preview gallery access</li>
                     </ul>
                 </div>
-                
-                <div class="image-pricing-cards">
-                    <div class="image-type-card">
-                        <div class="image-type-header">
+
+                <div class="pricing-options">
+                    <div class="option-card">
+                        <div class="option-header">
                             <h4>HDR Images</h4>
-                            <div class="image-price">฿200</div>
-                            <span class="price-unit">per selected image</span>
+                            <div class="price-tag">฿200<span>/image</span></div>
                         </div>
-                        <p class="image-description">Natural light photography with enhanced dynamic range</p>
-                        <ul class="image-features">
-                            <li>Natural light photography</li>
-                            <li>High Dynamic Range processing</li>
-                            <li>Enhanced lighting and shadows</li>
-                            <li>Professional color correction</li>
-                            <li>Perfect for bright, airy spaces</li>
-                        </ul>
+                        <p>Natural light photography with enhanced dynamic range</p>
                     </div>
-                    
-                    <div class="image-type-card featured">
-                        <div class="featured-badge">Premium</div>
-                        <div class="image-type-header">
+
+                    <div class="option-card featured">
+                        <div class="option-badge">Premium</div>
+                        <div class="option-header">
                             <h4>Flambient Images</h4>
-                            <div class="image-price">฿300</div>
-                            <span class="price-unit">per selected image</span>
+                            <div class="price-tag">฿300<span>/image</span></div>
                         </div>
-                        <p class="image-description">Flash-assisted photography for magazine-quality results</p>
-                        <ul class="image-features">
-                            <li>Flash lighting for premium feel</li>
-                            <li>High-end magazine quality</li>
-                            <li>Perfect exposure balance</li>
-                            <li>Enhanced architectural details</li>
-                            <li>Ideal for luxury properties</li>
-                        </ul>
+                        <p>Flash-assisted photography for magazine-quality results</p>
                     </div>
                 </div>
-            </div>
-            
-            <div class="calculator-section">
-                <div class="calculator-header">
-                    <h3>Estimate Your Cost</h3>
-                    <p>Use this calculator to estimate the total cost based on your expected needs</p>
-                </div>
-                
-                <div class="calculator-interface">
-                    <div class="image-selector">
-                        <div class="selector-row">
-                            <div class="selector-item">
-                                <label>HDR (Natural Light) Images</label>
-                                <div class="number-input">
-                                    <button class="number-btn minus" data-target="hdr-count">−</button>
-                                    <input type="number" id="hdr-count" min="0" value="0" readonly>
-                                    <button class="number-btn plus" data-target="hdr-count">+</button>
-                                </div>
-                                <span class="price-hint">฿200 per image</span>
-                            </div>
-                            <div class="selector-item">
-                                <label>Flambient (Flash) Images</label>
-                                <div class="number-input">
-                                    <button class="number-btn minus" data-target="flambient-count">−</button>
-                                    <input type="number" id="flambient-count" min="0" value="0" readonly>
-                                    <button class="number-btn plus" data-target="flambient-count">+</button>
-                                </div>
-                                <span class="price-hint">฿300 per image</span>
+
+                <div class="quick-calculator">
+                    <h3>Quick Estimate</h3>
+                    <div class="calculator-grid">
+                        <div class="calc-row">
+                            <label>HDR Images</label>
+                            <div class="number-input">
+                                <button class="number-btn minus" data-target="hdr-count">−</button>
+                                <input type="number" id="hdr-count" min="0" value="0" readonly>
+                                <button class="number-btn plus" data-target="hdr-count">+</button>
                             </div>
                         </div>
-                    </div>
-                    
-                    <div class="total-display">
-                        <div class="total-line">
-                            <span>Base Shoot Fee</span>
-                            <span>฿6,000</span>
+                        <div class="calc-row">
+                            <label>Flambient Images</label>
+                            <div class="number-input">
+                                <button class="number-btn minus" data-target="flambient-count">−</button>
+                                <input type="number" id="flambient-count" min="0" value="0" readonly>
+                                <button class="number-btn plus" data-target="flambient-count">+</button>
+                            </div>
                         </div>
-                        <div class="total-line">
-                            <span>HDR Images</span>
-                            <span id="hdr-breakdown">฿0</span>
-                        </div>
-                        <div class="total-line">
-                            <span>Flambient Images</span>
-                            <span id="flambient-breakdown">฿0</span>
-                        </div>
-                        <div class="total-final">
-                            <span>Estimated Total</span>
-                            <span id="final-total">฿6,000</span>
+                        <div class="total-row">
+                            <span>Estimated Total:</span>
+                            <span id="final-total" class="total-amount">฿6,000</span>
                         </div>
                     </div>
-                </div>
-                
-                <div class="calculator-note">
-                    <p>* Final cost will depend on the actual number of images you select from the preview gallery</p>
-                </div>
-                
-                <div class="calculator-cta">
                     <a href="#contact" class="btn btn-primary">Book Pay-Per-Image Service</a>
                 </div>
             </div>
@@ -441,12 +356,7 @@
                 <div class="featured-service-card">
                     <div class="service-header">
                         <div class="service-icon">
-                            <svg width="60" height="60" viewBox="0 0 60 60">
-                                <rect x="10" y="10" width="40" height="40" fill="#e6bc44" opacity="0.1" rx="6"/>
-                                <path d="M20 20 L40 20 L40 40 L20 40 Z" fill="none" stroke="#e6bc44" stroke-width="2"/>
-                                <circle cx="30" cy="30" r="8" fill="#e6bc44"/>
-                                <path d="M25 25 L35 35 M35 25 L25 35" stroke="#fff" stroke-width="1"/>
-                            </svg>
+                            <i class="fa-solid fa-video fa-2xl" style="color: #e6bc44;"></i>
                         </div>
                         <div class="service-info">
                             <h3>Video Services</h3>
@@ -466,13 +376,7 @@
                 <div class="featured-service-card">
                     <div class="service-header">
                         <div class="service-icon">
-                            <svg width="60" height="60" viewBox="0 0 60 60">
-                                <rect x="10" y="10" width="40" height="40" fill="#e6bc44" opacity="0.1" rx="6"/>
-                                <path d="M20 15 L30 25 L40 15" stroke="#e6bc44" stroke-width="2" fill="none"/>
-                                <path d="M20 25 L30 35 L40 25" stroke="#e6bc44" stroke-width="2" fill="none"/>
-                                <circle cx="30" cy="20" r="2" fill="#e6bc44"/>
-                                <circle cx="30" cy="30" r="2" fill="#e6bc44"/>
-                            </svg>
+                            <i class="fa-solid fa-chalkboard-user fa-2xl" style="color: #e6bc44;"></i>
                         </div>
                         <div class="service-info">
                             <h3>Team Training & Consulting</h3>
@@ -494,12 +398,7 @@
                 <div class="featured-service-card">
                     <div class="service-header">
                         <div class="service-icon">
-                            <svg width="60" height="60" viewBox="0 0 60 60">
-                                <rect x="10" y="10" width="40" height="40" fill="#e6bc44" opacity="0.1" rx="6"/>
-                                <path d="M20 20 L40 20 L40 40 L20 40 Z" fill="none" stroke="#e6bc44" stroke-width="2"/>
-                                <path d="M25 25 L35 25 M25 30 L35 30 M25 35 L35 35" stroke="#e6bc44" stroke-width="1"/>
-                                <circle cx="30" cy="30" r="3" fill="#e6bc44"/>
-                            </svg>
+                            <i class="fa-solid fa-vr-cardboard fa-2xl" style="color: #e6bc44;"></i>
                         </div>
                         <div class="service-info">
                             <h3>Virtual Tours</h3>
@@ -519,12 +418,7 @@
                 <div class="featured-service-card">
                     <div class="service-header">
                         <div class="service-icon">
-                            <svg width="60" height="60" viewBox="0 0 60 60">
-                                <rect x="10" y="10" width="40" height="40" fill="#e6bc44" opacity="0.1" rx="6"/>
-                                <circle cx="30" cy="25" r="8" fill="#e6bc44"/>
-                                <path d="M20 35 L40 35" stroke="#e6bc44" stroke-width="2"/>
-                                <path d="M25 40 L35 40" stroke="#e6bc44" stroke-width="1"/>
-                            </svg>
+                            <i class="fa-solid fa-user-tie fa-2xl" style="color: #e6bc44;"></i>
                         </div>
                         <div class="service-info">
                             <h3>Headshots</h3>
@@ -548,27 +442,16 @@
                 <div class="services-grid">
                     <div class="service-card-mini">
                         <div class="mini-service-icon">
-                            <svg width="40" height="40" viewBox="0 0 40 40">
-                                <rect x="8" y="8" width="24" height="24" fill="#e6bc44" opacity="0.1" rx="4"/>
-                                <path d="M12 12 L28 12 L28 28 L12 28 Z" fill="none" stroke="#e6bc44" stroke-width="2"/>
-                                <path d="M16 16 L24 16 M16 20 L24 20 M16 24 L24 24" stroke="#e6bc44" stroke-width="1"/>
-                                <circle cx="20" cy="20" r="2" fill="#e6bc44"/>
-                            </svg>
+                            <i class="fa-solid fa-helicopter fa-xl" style="color: #e6bc44;"></i>
                         </div>
                         <h4>Drone Services</h4>
                         <p class="mini-price">From ฿2,000</p>
                         <p>Photography & videography from above</p>
                     </div>
 
-
-
                     <div class="service-card-mini">
                         <div class="mini-service-icon">
-                            <svg width="40" height="40" viewBox="0 0 40 40">
-                                <rect x="8" y="8" width="24" height="24" fill="#e6bc44" opacity="0.1" rx="4"/>
-                                <path d="M12 12 L28 12 L28 28 L12 28 Z" fill="none" stroke="#e6bc44" stroke-width="2"/>
-                                <path d="M16 16 L24 16 M16 20 L24 20 M16 24 L24 24" stroke="#e6bc44" stroke-width="2"/>
-                            </svg>
+                            <i class="fa-solid fa-building fa-xl" style="color: #e6bc44;"></i>
                         </div>
                         <h4>Architecture & Interior</h4>
                         <p class="mini-price">Custom pricing</p>
@@ -577,12 +460,7 @@
 
                     <div class="service-card-mini">
                         <div class="mini-service-icon">
-                            <svg width="40" height="40" viewBox="0 0 40 40">
-                                <rect x="8" y="8" width="24" height="24" fill="#e6bc44" opacity="0.1" rx="4"/>
-                                <path d="M12 16 L28 16 L28 24 L12 24 Z" fill="none" stroke="#e6bc44" stroke-width="2"/>
-                                <path d="M16 18 L24 18 M16 20 L24 20 M16 22 L24 22" stroke="#e6bc44" stroke-width="1"/>
-                                <circle cx="20" cy="20" r="1" fill="#e6bc44"/>
-                            </svg>
+                            <i class="fa-solid fa-wand-magic-sparkles fa-xl" style="color: #e6bc44;"></i>
                         </div>
                         <h4>Pro Retouching</h4>
                         <p class="mini-price">From ฿500</p>
@@ -591,12 +469,7 @@
 
                     <div class="service-card-mini">
                         <div class="mini-service-icon">
-                            <svg width="40" height="40" viewBox="0 0 40 40">
-                                <rect x="8" y="8" width="24" height="24" fill="#e6bc44" opacity="0.1" rx="4"/>
-                                <path d="M12 16 L28 16 L28 24 L12 24 Z" fill="none" stroke="#e6bc44" stroke-width="2"/>
-                                <path d="M16 18 L24 18 M16 20 L24 20" stroke="#e6bc44" stroke-width="1"/>
-                                <circle cx="20" cy="22" r="2" fill="#e6bc44"/>
-                            </svg>
+                            <i class="fa-solid fa-couch fa-xl" style="color: #e6bc44;"></i>
                         </div>
                         <h4>Virtual Staging</h4>
                         <p class="mini-price">From ฿5,000</p>
@@ -612,97 +485,45 @@
     <!-- Licensing -->
     <section class="licensing">
         <div class="container">
-            <h2 class="section-title">Licensing & Usage Rights</h2>
-            <p class="section-subtitle">Understanding your rights and usage permissions</p>
+            <button class="licensing-toggle">
+                <div class="toggle-content">
+                    <i class="fa-solid fa-shield-halved fa-xl" style="color: #e6bc44;"></i>
+                    <span>Licensing & Usage Rights</span>
+                </div>
+                <i class="fa-solid fa-chevron-down toggle-icon"></i>
+            </button>
             
-            <div class="licensing-grid">
-                <!-- Standard License Card -->
-                <div class="license-card">
-                    <div class="license-header">
-                        <div class="license-icon">
-                            <svg width="50" height="50" viewBox="0 0 50 50">
-                                <circle cx="25" cy="25" r="20" fill="#e6bc44" opacity="0.1"/>
-                                <path d="M15 20 L35 20 L35 30 L15 30 Z" fill="none" stroke="#e6bc44" stroke-width="2"/>
-                                <path d="M20 25 L30 25" stroke="#e6bc44" stroke-width="2"/>
-                                <path d="M20 28 L30 28" stroke="#e6bc44" stroke-width="1"/>
-                                <circle cx="25" cy="25" r="2" fill="#e6bc44"/>
-                            </svg>
-                        </div>
-                        <h3>Standard License</h3>
-                        <p class="license-subtitle">Included with all packages</p>
-                    </div>
-                    <div class="license-content">
-                        <h4>What you can do:</h4>
-                        <ul class="license-features">
-                            <li>✅ Online property listings</li>
-                            <li>✅ Social media marketing</li>
-                            <li>✅ Digital advertising</li>
-                            <li>✅ Property brochures</li>
-                            <li>✅ Real estate websites</li>
+            <div class="licensing-content hidden">
+                <div class="license-info">
+                    <div class="license-section">
+                        <h3><i class="fa-solid fa-check-circle"></i> Included with all packages</h3>
+                        <ul>
+                            <li>Online property listings</li>
+                            <li>Social media marketing</li>
+                            <li>Digital advertising</li>
+                            <li>Property brochures</li>
+                            <li>Real estate websites</li>
                         </ul>
                         <p class="license-note">All usage must be related to selling or renting the specific property photographed.</p>
                     </div>
-                </div>
-
-                <!-- Restrictions Card -->
-                <div class="license-card restrictions">
-                    <div class="license-header">
-                        <div class="license-icon">
-                            <svg width="50" height="50" viewBox="0 0 50 50">
-                                <circle cx="25" cy="25" r="20" fill="#dc3545" opacity="0.1"/>
-                                <path d="M15 20 L35 20 L35 30 L15 30 Z" fill="none" stroke="#dc3545" stroke-width="2"/>
-                                <path d="M18 18 L32 32 M32 18 L18 32" stroke="#dc3545" stroke-width="2"/>
-                                <circle cx="25" cy="25" r="2" fill="#dc3545"/>
-                            </svg>
-                        </div>
-                        <h3>Usage Restrictions</h3>
-                        <p class="license-subtitle">What's not permitted</p>
-                    </div>
-                    <div class="license-content">
-                        <ul class="license-features restrictions-list">
-                            <li>❌ Reselling images to third parties</li>
-                            <li>❌ Using images for other properties</li>
-                            <li>❌ Third-party commercial advertising</li>
-                            <li>❌ Magazine publications (without permission)</li>
-                            <li>❌ Stock photo websites</li>
+                    
+                    <div class="license-section">
+                        <h3><i class="fa-solid fa-circle-xmark"></i> Not permitted</h3>
+                        <ul>
+                            <li>Reselling images to third parties</li>
+                            <li>Using images for other properties</li>
+                            <li>Third-party commercial advertising</li>
+                            <li>Magazine publications (without permission)</li>
                         </ul>
                     </div>
-                </div>
-
-                <!-- Extended Rights Card -->
-                <div class="license-card extended">
-                    <div class="license-header">
-                        <div class="license-icon">
-                            <svg width="50" height="50" viewBox="0 0 50 50">
-                                <circle cx="25" cy="25" r="20" fill="#28a745" opacity="0.1"/>
-                                <path d="M15 20 L35 20 L35 30 L15 30 Z" fill="none" stroke="#28a745" stroke-width="2"/>
-                                <path d="M20 25 L30 25" stroke="#28a745" stroke-width="2"/>
-                                <path d="M20 28 L30 28" stroke="#28a745" stroke-width="1"/>
-                                <path d="M15 15 L35 15" stroke="#28a745" stroke-width="1" opacity="0.5"/>
-                                <circle cx="25" cy="25" r="2" fill="#28a745"/>
-                            </svg>
-                        </div>
-                        <h3>Extended Rights</h3>
-                        <p class="license-subtitle">Available upon request</p>
-                    </div>
-                    <div class="license-content">
-                        <h4>Need more flexibility?</h4>
-                        <p>We offer extended licensing options for:</p>
-                        <ul class="license-features">
-                            <li>🔓 Multiple property usage</li>
-                            <li>🔓 Extended exclusivity periods</li>
-                            <li>🔓 Full buyout rights</li>
-                            <li>🔓 Commercial licensing</li>
-                            <li>🔓 Custom usage agreements</li>
-                        </ul>
-                        <div class="license-cta">
-                            <a href="#contact" class="btn btn-secondary">Discuss Extended Rights</a>
-                        </div>
+                    
+                    <div class="license-section">
+                        <h3><i class="fa-solid fa-crown"></i> Need more flexibility?</h3>
+                        <p>Extended licensing options available for multiple property usage, commercial licensing, and custom agreements.</p>
+                        <a href="#contact" class="btn btn-secondary">Discuss Extended Rights</a>
                     </div>
                 </div>
             </div>
-
-
         </div>
     </section>
 
@@ -716,13 +537,7 @@
                 <!-- Consultation Card -->
                 <div class="custom-card">
                     <div class="custom-icon">
-                        <svg width="60" height="60" viewBox="0 0 60 60">
-                            <circle cx="30" cy="30" r="25" fill="#e6bc44" opacity="0.1"/>
-                            <path d="M20 20 L40 20 L40 40 L20 40 Z" fill="none" stroke="#e6bc44" stroke-width="2"/>
-                            <path d="M25 25 L35 25 M25 30 L35 30 M25 35 L35 35" stroke="#e6bc44" stroke-width="1"/>
-                            <circle cx="30" cy="30" r="3" fill="#e6bc44"/>
-                            <path d="M15 15 L45 15" stroke="#e6bc44" stroke-width="1" opacity="0.3"/>
-                        </svg>
+                        <i class="fa-solid fa-comments fa-2xl" style="color: #e6bc44;"></i>
                     </div>
                     <h3>Free Consultation</h3>
                     <p>Schedule a call to discuss your project requirements, timeline, and budget. We'll help you choose the best approach.</p>
@@ -738,14 +553,7 @@
                 <div class="custom-card featured">
                     <div class="custom-badge">Most Popular</div>
                     <div class="custom-icon">
-                        <svg width="60" height="60" viewBox="0 0 60 60">
-                            <circle cx="30" cy="30" r="25" fill="#e6bc44" opacity="0.1"/>
-                            <path d="M20 20 L40 20 L40 40 L20 40 Z" fill="none" stroke="#e6bc44" stroke-width="2"/>
-                            <path d="M25 25 L35 25 M25 30 L35 30 M25 35 L35 35" stroke="#e6bc44" stroke-width="1"/>
-                            <circle cx="30" cy="30" r="3" fill="#e6bc44"/>
-                            <path d="M15 15 L45 15" stroke="#e6bc44" stroke-width="1" opacity="0.3"/>
-                            <path d="M15 45 L45 45" stroke="#e6bc44" stroke-width="1" opacity="0.3"/>
-                        </svg>
+                        <i class="fa-solid fa-wand-sparkles fa-2xl" style="color: #e6bc44;"></i>
                     </div>
                     <h3>Tailored Solutions</h3>
                     <p>We create custom packages that perfectly match your property type, marketing goals, and budget requirements.</p>
@@ -760,15 +568,7 @@
                 <!-- Special Projects Card -->
                 <div class="custom-card">
                     <div class="custom-icon">
-                        <svg width="60" height="60" viewBox="0 0 60 60">
-                            <circle cx="30" cy="30" r="25" fill="#e6bc44" opacity="0.1"/>
-                            <path d="M20 20 L40 20 L40 40 L20 40 Z" fill="none" stroke="#e6bc44" stroke-width="2"/>
-                            <path d="M25 25 L35 25 M25 30 L35 30 M25 35 L35 35" stroke="#e6bc44" stroke-width="1"/>
-                            <circle cx="30" cy="30" r="3" fill="#e6bc44"/>
-                            <path d="M15 15 L45 15" stroke="#e6bc44" stroke-width="1" opacity="0.3"/>
-                            <path d="M15 45 L45 45" stroke="#e6bc44" stroke-width="1" opacity="0.3"/>
-                            <path d="M15 15 L45 45" stroke="#e6bc44" stroke-width="1" opacity="0.2"/>
-                        </svg>
+                        <i class="fa-solid fa-star fa-2xl" style="color: #e6bc44;"></i>
                     </div>
                     <h3>Special Projects</h3>
                     <p>From luxury villas to commercial properties, we handle unique projects that require specialized attention.</p>
@@ -785,34 +585,37 @@
             <div class="custom-cta">
                 <div class="cta-content">
                     <div class="cta-icon">
-                        <svg width="80" height="80" viewBox="0 0 80 80">
-                            <circle cx="40" cy="40" r="35" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.3)" stroke-width="2"/>
-                            <path d="M25 40 L35 50 L55 30" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
+                        <i class="fa-solid fa-camera fa-3x" style="color: #ffffff;"></i>
                     </div>
                     <h3>Let's Create Something Amazing</h3>
                     <p>Ready to transform your property listings? We're here to help you choose the perfect solution.</p>
                     
                     <div class="cta-options">
                         <div class="cta-option">
-                            <div class="option-icon">💬</div>
+                            <div class="option-icon">
+                                <i class="fa-solid fa-phone-volume fa-2x"></i>
+                            </div>
                             <h4>Quick Chat</h4>
                             <p>15-minute consultation to discuss your needs</p>
-                            <a href="#contact" class="btn btn-primary">Start Chat</a>
+                            <a href="https://portal.urbaanvisuals.com/discovery" target="_blank" class="btn btn-primary">Schedule Call</a>
                         </div>
                         
                         <div class="cta-option featured">
-                            <div class="option-icon">📧</div>
+                            <div class="option-icon">
+                                <i class="fa-solid fa-envelope-open-text fa-2x"></i>
+                            </div>
                             <h4>Direct Email</h4>
                             <p>Send us your project details for a custom quote</p>
-                            <a href="mailto:hello@urbaanvisuals.com?subject=Custom Photography Quote" class="btn btn-secondary">Send Email</a>
+                            <a href="mailto:hello@urbaanvisuals.com?subject=Photography%20Services%20Inquiry" class="btn btn-secondary">Send Email</a>
                         </div>
                         
                         <div class="cta-option">
-                            <div class="option-icon">📱</div>
+                            <div class="option-icon">
+                                <i class="fa-brands fa-whatsapp fa-2x"></i>
+                            </div>
                             <h4>WhatsApp</h4>
                             <p>Quick questions? Message us directly</p>
-                            <a href="https://wa.me/+66XXXXXXXXX" class="btn btn-outline">Message Us</a>
+                            <a href="https://wa.me/66654475786?text=Hi%2C%20thanks%20for%20reaching%20out%20to%20Urbaan%20Visuals!%20Please%20feel%20free%20to%20share%20details%20about%20what%20you%E2%80%99re%20looking%20for%20%E2%80%93%20the%20service%20you%E2%80%99re%20interested%20in%2C%20your%20property%20or%20project%20information%2C%20and%20any%20specific%20requirements.%20I%E2%80%99ll%20review%20it%20and%20get%20back%20to%20you%20with%20a%20few%20questions%20shortly." target="_blank" class="btn btn-outline">Message Us</a>
                         </div>
                     </div>
                 </div>
@@ -835,26 +638,27 @@
             </div>
             
             <div class="contact-form-container">
-                <form id="contactForm" class="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
+                <!-- Bloom Form Integration -->
+                <form id="contactForm" class="contact-form" data-bloom-form-id="e2y9wlgjwd5lv">
                     <div class="form-grid">
                         <div class="form-group">
                             <label for="name">Name *</label>
-                            <input type="text" id="name" name="name" required>
+                            <input type="text" id="name" name="name" required data-bloom-field="name">
                         </div>
                         
                         <div class="form-group">
                             <label for="email">Email *</label>
-                            <input type="email" id="email" name="email" required>
+                            <input type="email" id="email" name="email" required data-bloom-field="email">
                         </div>
                         
                         <div class="form-group">
                             <label for="phone">Phone</label>
-                            <input type="tel" id="phone" name="phone">
+                            <input type="tel" id="phone" name="phone" pattern="[0-9+\s-()]*" data-bloom-field="phone">
                         </div>
                         
                         <div class="form-group">
                             <label for="property-type">Property Type</label>
-                            <select id="property-type" name="property-type">
+                            <select id="property-type" name="property-type" data-bloom-field="property_type">
                                 <option value="">Select property type</option>
                                 <option value="studio">Studio</option>
                                 <option value="1br">1 Bedroom</option>
@@ -868,12 +672,12 @@
                         
                         <div class="form-group full-width">
                             <label for="service">Service Interest</label>
-                            <select id="service" name="service">
+                            <select id="service" name="service" data-bloom-field="service_interest">
                                 <option value="">Select service</option>
-                                <option value="essential">Essential Package</option>
-                                <option value="premium">Premium Package</option>
-                                <option value="ultra">Ultra Package</option>
-                                <option value="prestige">Prestige Package</option>
+                                <option value="essential">Essential Package (฿9,900)</option>
+                                <option value="premium">Premium Package (฿13,900)</option>
+                                <option value="ultra">Ultra Package (฿18,900)</option>
+                                <option value="prestige">Prestige Package (฿26,000)</option>
                                 <option value="photo-only">Photography Only</option>
                                 <option value="video">Video Services</option>
                                 <option value="drone">Drone Services</option>
@@ -886,7 +690,7 @@
                         
                         <div class="form-group full-width">
                             <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="5" placeholder="Tell us about your project, property details, timeline, and any specific requirements..."></textarea>
+                            <textarea id="message" name="message" rows="5" placeholder="Tell us about your project, property details, timeline, and any specific requirements..." data-bloom-field="message"></textarea>
                         </div>
                     </div>
                     
@@ -906,7 +710,7 @@
                     <div class="alternative-content">
                         <h3>Discovery Call</h3>
                         <p>Alternatively, you may book a call with us for more information about what Urbaan Visuals can do for you.</p>
-                        <a href="#" class="btn btn-secondary">Book your call</a>
+                        <a href="https://portal.urbaanvisuals.com/discovery" target="_blank" class="btn btn-secondary">Book your call</a>
                     </div>
                 </div>
             </div>
@@ -923,34 +727,24 @@
                 
                 <div class="footer-links">
                     <div class="footer-section">
-                        <h4>Company</h4>
+                        <h4>Quick Links</h4>
                         <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Services</a></li>
-                            <li><a href="#">Our Work</a></li>
-                            <li><a href="#">Book Now</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="footer-section">
-                        <h4>Support</h4>
-                        <ul>
-                            <li><a href="#contact">Contact</a></li>
-                            <li><a href="#">Discovery Call</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="footer-section">
-                        <h4>Clients</h4>
-                        <ul>
-                            <li><a href="#">Client Portal</a></li>
+                            <li><a href="https://www.urbaanvisuals.com/" target="_blank">Home</a></li>
+                            <li><a href="https://www.urbaanvisuals.com/services" target="_blank">Services</a></li>
+                            <li><a href="https://www.urbaanvisuals.com/our-work" target="_blank">Our Work</a></li>
+                            <li><a href="https://www.urbaanvisuals.com/book" target="_blank">Book</a></li>
+                            <li><a href="https://www.urbaanvisuals.com/contact" target="_blank">Contact</a></li>
+                            <li><a href="https://www.urbaanvisuals.com/discovery-call" target="_blank">Discovery Call</a></li>
+                            <li><a href="https://portal.urbaanvisuals.com/login" target="_blank">Client Portal</a></li>
                         </ul>
                     </div>
                     
                     <div class="footer-section">
                         <h4>Socials</h4>
                         <ul>
-                            <li><a href="#" class="social-link">instagram icon</a></li>
+                            <li><a href="https://www.instagram.com/urbaanvisuals/" class="social-link" target="_blank"><i class="fa-brands fa-instagram fa-lg"></i> Instagram</a></li>
+                            <li><a href="https://www.facebook.com/profile.php?id=61574961425925" class="social-link" target="_blank"><i class="fa-brands fa-facebook fa-lg"></i> Facebook</a></li>
+                            <li><a href="https://www.linkedin.com/company/105575958/" class="social-link" target="_blank"><i class="fa-brands fa-linkedin fa-lg"></i> LinkedIn</a></li>
                         </ul>
                     </div>
                 </div>
@@ -958,15 +752,45 @@
             
             <div class="footer-bottom">
                 <div class="footer-info">
+                    <div class="footer-logo">
+                        <img src="Urbaan Visuals - Symbol White_100px.png" alt="Urbaan Visuals logo" style="height:48px; width:auto; display:block; margin-bottom: 1rem;" />
+                    </div>
                     <p>urbaan visuals</p>
                     <p>94/32 Moo 7, Kathu Subdistrict, PHUKET, THAILAND</p>
-                    <p>Ⓒ JLM PROPERTIES CO., LTD. XXXX</p>
-                    <p>Design by Quew Digital</p>
+                    <p>Ⓒ JLM PROPERTIES CO., LTD. 2025</p>
                 </div>
             </div>
         </div>
     </footer>
 
     <script src="script.js"></script>
+    
+    <!-- Bloom Integration -->
+    <script>
+        window.bloomSettings = {
+            userId: "vn8d2r0zp7oq6",
+            profileId: "8mx73kvmjdqe2",
+            messenger: {
+                persistence: true,
+                autoOpen: {
+                    enabled: true,
+                    delay: 5000,
+                    repeat: false
+                }
+            }
+        };
+        if (void 0 === bloomScript) {
+            var bloomScript = document.createElement("script");
+            bloomScript.async = !0;
+            fetch("https://code.bloom.io/version?t=" + Date.now())
+                .then(function(t) {
+                    return t.text()
+                })
+                .then(function(t) {
+                    bloomScript.src = "https://code.bloom.io/widget.js?v=" + t;
+                    document.head.appendChild(bloomScript)
+                });
+        }
+    </script>
 </body>
 </html> 

@@ -52,40 +52,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Contact Form Handling
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form data
-            const formData = new FormData(contactForm);
-            const data = Object.fromEntries(formData);
-            
-            // Basic validation
-            if (!data.name || !data.email) {
-                alert('Please fill in all required fields.');
-                return;
-            }
-            
-            // Email validation
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(data.email)) {
-                alert('Please enter a valid email address.');
-                return;
-            }
-            
-            // Simulate form submission
-            const submitBtn = contactForm.querySelector('button[type="submit"]');
-            const originalText = submitBtn.textContent;
-            submitBtn.textContent = 'Sending...';
-            submitBtn.disabled = true;
-            
-            // Simulate API call
-            setTimeout(() => {
-                alert('Thank you for your message! We will get back to you within 24 hours.');
-                contactForm.reset();
-                submitBtn.textContent = originalText;
-                submitBtn.disabled = false;
-            }, 2000);
-        });
+        // Bloom handles form submission
+        console.log('Bloom form initialized');
     }
 
     // Smooth scrolling for navigation links
@@ -274,3 +242,160 @@ document.addEventListener('DOMContentLoaded', function() {
     `;
     document.head.appendChild(style);
 }); 
+
+// Licensing toggle functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const licensingToggle = document.querySelector('.licensing-toggle');
+    const licensingContent = document.querySelector('.licensing-content');
+
+    if (licensingToggle && licensingContent) {
+        licensingToggle.setAttribute('aria-expanded', 'false');
+        
+        licensingToggle.addEventListener('click', function() {
+            const isExpanded = this.getAttribute('aria-expanded') === 'true';
+            this.setAttribute('aria-expanded', !isExpanded);
+            licensingContent.classList.toggle('hidden');
+            
+            // Smooth scroll into view if expanding
+            if (!isExpanded) {
+                setTimeout(() => {
+                    licensingContent.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                }, 100);
+            }
+        });
+    }
+}); 
+
+// Handle package selection buttons
+document.addEventListener('DOMContentLoaded', function() {
+    // Get all package selection buttons
+    const packageButtons = document.querySelectorAll('.package-card .btn-primary');
+    
+    packageButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Get package details
+            const packageCard = this.closest('.package-card');
+            const packageName = packageCard.querySelector('h3').textContent;
+            const packagePrice = packageCard.querySelector('.price').textContent;
+            
+            // Pre-fill contact form
+            const serviceSelect = document.querySelector('#service');
+            if (serviceSelect) {
+                // Find and select the matching option
+                Array.from(serviceSelect.options).forEach(option => {
+                    if (option.text.includes(packageName)) {
+                        serviceSelect.value = option.value;
+                        // Trigger change event for Bloom
+                        serviceSelect.dispatchEvent(new Event('change', { bubbles: true }));
+                    }
+                });
+            }
+            
+            // Add package info to message
+            const messageArea = document.querySelector('#message');
+            if (messageArea) {
+                messageArea.value = `I'm interested in the ${packageName} package (${packagePrice}).\n\n`;
+                // Trigger change event for Bloom
+                messageArea.dispatchEvent(new Event('change', { bubbles: true }));
+            }
+            
+            // Smooth scroll to contact form
+            document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' });
+        });
+    });
+});
+
+// Handle WhatsApp clicks with package info
+document.querySelectorAll('a[href^="https://wa.me"]').forEach(link => {
+    link.addEventListener('click', function(e) {
+        // Get any pre-selected package or service info
+        const selectedService = document.querySelector('#service').value;
+        let baseMessage = "Hi, thanks for reaching out to Urbaan Visuals! Please feel free to share details about what you're looking for – ";
+        
+        if (selectedService) {
+            baseMessage += `I'm interested in the ${selectedService} package. `;
+        }
+        
+        baseMessage += "the service you're interested in, your property or project information, and any specific requirements. I'll review it and get back to you with a few questions shortly.";
+        
+        this.href = `https://wa.me/66654475786?text=${encodeURIComponent(baseMessage)}`;
+    });
+});
+
+// Form validation visual feedback
+document.querySelectorAll('.form-group input, .form-group select, .form-group textarea').forEach(input => {
+    input.addEventListener('blur', function() {
+        if (this.checkValidity()) {
+            this.classList.add('valid');
+            this.classList.remove('invalid');
+        } else {
+            this.classList.add('invalid');
+            this.classList.remove('valid');
+        }
+    });
+});
+
+// Handle form submission
+document.getElementById('contactForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    
+    const form = this;
+    const submitButton = form.querySelector('button[type="submit"]');
+    const originalButtonText = submitButton.innerHTML;
+    
+    try {
+        // Disable submit button and show loading state
+        submitButton.disabled = true;
+        submitButton.innerHTML = '<span class="btn-text">Sending...</span>';
+        
+        // Get form data
+        const formData = new FormData(form);
+        
+        // Send to Formspree
+        const response = await fetch(form.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        });
+        
+        if (response.ok) {
+            // Success - redirect to thank you page or show success message
+            const redirectUrl = form.querySelector('input[name="_next"]').value;
+            if (redirectUrl) {
+                window.location.href = redirectUrl;
+            } else {
+                // Show success message if no redirect URL
+                showFormMessage('Thank you! We will contact you soon.', 'success');
+                form.reset();
+            }
+        } else {
+            // Show error message
+            throw new Error('Form submission failed');
+        }
+    } catch (error) {
+        showFormMessage('Sorry, there was a problem. Please try again or contact us directly.', 'error');
+    } finally {
+        // Re-enable submit button and restore original text
+        submitButton.disabled = false;
+        submitButton.innerHTML = originalButtonText;
+    }
+});
+
+// Helper function to show form messages
+function showFormMessage(message, type) {
+    const messageDiv = document.createElement('div');
+    messageDiv.className = `form-message ${type}`;
+    messageDiv.textContent = message;
+    
+    const form = document.getElementById('contactForm');
+    form.insertBefore(messageDiv, form.firstChild);
+    
+    // Remove message after 5 seconds
+    setTimeout(() => {
+        messageDiv.remove();
+    }, 5000);
+} 
