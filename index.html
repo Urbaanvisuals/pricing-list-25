@@ -275,26 +275,31 @@
         </div>
     </section>
 
-    <!-- All Packages Include -->
-    <section class="includes">
-        <div class="container">
-            <div class="includes-content">
-                <h2>All packages include:</h2>
-                <ul class="includes-list">
-                    <li>Standard editing and minor blemish removal</li>
-                    <li>Travel within Phuket</li>
-                    <li>Standard per image license</li>
-                    <li>Free "For Sale or For Rent" sign with your property info & image</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
     <!-- Per Image Pricing -->
-    <section class="per-image-pricing">
+    <section class="per-image-pricing alternate-service">
         <div class="container">
-            <h2 class="section-title">Per Image Pricing</h2>
-            <p class="section-subtitle">This per image pricing includes base fee which covers the shooting and a wide selection of images from the shoot, lightly edited for preview. Once your preferred shots are selected, they undergo final retouching and are added to the final invoice before delivery</p>
+            <div class="service-intro">
+                <h2 class="section-title">Pay Per Image Service</h2>
+                <p class="section-subtitle">A flexible approach for clients who want to select their final images after the shoot</p>
+                
+                <div class="workflow-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h4>Book Your Shoot</h4>
+                        <p>Pay only the base fee to secure your photography session</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h4>Review Preview Gallery</h4>
+                        <p>Get access to a private gallery of lightly edited preview images</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h4>Select & Pay</h4>
+                        <p>Choose your preferred images and only pay for what you need</p>
+                    </div>
+                </div>
+            </div>
             
             <div class="pricing-overview">
                 <div class="base-fee-card">
@@ -302,13 +307,14 @@
                         <h3>Base Shoot Fee</h3>
                         <div class="fee-price">฿6,000</div>
                     </div>
-                    <p class="fee-description">One-time setup fee includes everything you need to get started</p>
+                    <p class="fee-description">Professional photography session with preview gallery access</p>
                     <ul class="fee-includes">
                         <li>2-hour on-site photography session</li>
                         <li>Professional equipment setup</li>
                         <li>Travel within Phuket</li>
                         <li>Light editing for preview gallery</li>
                         <li>Private selection platform</li>
+                        <li>No minimum image purchase required</li>
                     </ul>
                 </div>
                 
@@ -317,14 +323,15 @@
                         <div class="image-type-header">
                             <h4>HDR Images</h4>
                             <div class="image-price">฿200</div>
-                            <span class="price-unit">per image</span>
+                            <span class="price-unit">per selected image</span>
                         </div>
-                        <p class="image-description">Natural light photography with enhanced dynamic range for authentic property representation</p>
+                        <p class="image-description">Natural light photography with enhanced dynamic range</p>
                         <ul class="image-features">
                             <li>Natural light photography</li>
                             <li>High Dynamic Range processing</li>
                             <li>Enhanced lighting and shadows</li>
                             <li>Professional color correction</li>
+                            <li>Perfect for bright, airy spaces</li>
                         </ul>
                     </div>
                     
@@ -333,14 +340,15 @@
                         <div class="image-type-header">
                             <h4>Flambient Images</h4>
                             <div class="image-price">฿300</div>
-                            <span class="price-unit">per image</span>
+                            <span class="price-unit">per selected image</span>
                         </div>
-                        <p class="image-description">Flash-assisted photography for a high-end, magazine-quality look</p>
+                        <p class="image-description">Flash-assisted photography for magazine-quality results</p>
                         <ul class="image-features">
                             <li>Flash lighting for premium feel</li>
                             <li>High-end magazine quality</li>
                             <li>Perfect exposure balance</li>
                             <li>Enhanced architectural details</li>
+                            <li>Ideal for luxury properties</li>
                         </ul>
                     </div>
                 </div>
@@ -348,34 +356,37 @@
             
             <div class="calculator-section">
                 <div class="calculator-header">
-                    <h3>Calculate Your Shoot!</h3>
+                    <h3>Estimate Your Cost</h3>
+                    <p>Use this calculator to estimate the total cost based on your expected needs</p>
                 </div>
                 
                 <div class="calculator-interface">
                     <div class="image-selector">
                         <div class="selector-row">
                             <div class="selector-item">
-                                <label>HDR (Natural Light)</label>
+                                <label>HDR (Natural Light) Images</label>
                                 <div class="number-input">
                                     <button class="number-btn minus" data-target="hdr-count">−</button>
                                     <input type="number" id="hdr-count" min="0" value="0" readonly>
                                     <button class="number-btn plus" data-target="hdr-count">+</button>
                                 </div>
+                                <span class="price-hint">฿200 per image</span>
                             </div>
                             <div class="selector-item">
-                                <label>Flambient (Flash)</label>
+                                <label>Flambient (Flash) Images</label>
                                 <div class="number-input">
                                     <button class="number-btn minus" data-target="flambient-count">−</button>
                                     <input type="number" id="flambient-count" min="0" value="0" readonly>
                                     <button class="number-btn plus" data-target="flambient-count">+</button>
                                 </div>
+                                <span class="price-hint">฿300 per image</span>
                             </div>
                         </div>
                     </div>
                     
                     <div class="total-display">
                         <div class="total-line">
-                            <span>Base Fee</span>
+                            <span>Base Shoot Fee</span>
                             <span>฿6,000</span>
                         </div>
                         <div class="total-line">
@@ -387,15 +398,34 @@
                             <span id="flambient-breakdown">฿0</span>
                         </div>
                         <div class="total-final">
-                            <span>Total</span>
+                            <span>Estimated Total</span>
                             <span id="final-total">฿6,000</span>
                         </div>
                     </div>
                 </div>
                 
-                <div class="calculator-cta">
-                    <a href="#contact" class="btn btn-primary">Get Custom Quote</a>
+                <div class="calculator-note">
+                    <p>* Final cost will depend on the actual number of images you select from the preview gallery</p>
                 </div>
+                
+                <div class="calculator-cta">
+                    <a href="#contact" class="btn btn-primary">Book Pay-Per-Image Service</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- All Packages Include -->
+    <section class="includes">
+        <div class="container">
+            <div class="includes-content">
+                <h2>All packages include:</h2>
+                <ul class="includes-list">
+                    <li>Standard editing and minor blemish removal</li>
+                    <li>Travel within Phuket</li>
+                    <li>Standard per image license</li>
+                    <li>Free "For Sale or For Rent" sign with your property info & image</li>
+                </ul>
             </div>
         </div>
     </section>
@@ -888,7 +918,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <img src="logo.png" alt="Urbaan Visuals logo" style="height:36px; width:auto; display:block;" />
+                    <img src="Urbaan Visuals - Color-White_x1.png" alt="Urbaan Visuals logo white" style="height:36px; width:auto; display:block;" />
                 </div>
                 
                 <div class="footer-links">
